@@ -1,0 +1,47 @@
+
+Project directory diagram
+
+gym-management-system/
+pom.xml
+    src/
+        main/
+            java/
+                com/gym/
+                    Main.java
+                    dao/
+                        UserDAO.java
+                        MembershipDAO.java
+                        WorkoutClassDAO.java
+                    models/
+                        Member.java
+                        Trainer.java
+                        WorkoutClass.java
+                        User.java
+                        Admin.java
+                        Membership.java
+                    services/
+                        MembershipService.java
+                        WorkoutClassService.java
+                        UserService.java
+                    utils/
+                        DatabaseConnection.java
+
+Build process and dependencies 
+
+postgresql
+jbcrypt for password
+maven
+"mvn clean package" is used to compile the Project
+
+Database Setup
+
+install postgresql
+create the Database named gym
+use the provided sql code to create the tables
+use DatabaseConnection.java to connect and fill in your credentials
+
+Github Setup
+
+clone the project from Github
+build the porject using "mvn clean package"
+run the program using "java -cp target/gym-management-system-1.0-SNAPSHOT-jar-with-dependencies.jar com.gym.Main"

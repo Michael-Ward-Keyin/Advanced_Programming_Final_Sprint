@@ -1,0 +1,40 @@
+The Gym Management System is a simple program designed to help gyms manage users, memberships, and workout classes.
+Users can log in as Admins, Trainers, or Members.
+Each type of user has a different set of options, like buying memberships, creating workout classes, or viewing revenue.
+
+This is a console-based program. You type choices using numbers or text to interact with the system.
+
+Admins can view total membership revenue and manage users.
+Trainers can create update and delete classes.
+Members can view available classes and purchase memberships.
+
+When the program starts the user can register or login
+After logging in they see a menu based on their role.
+
+Main - Starts the program and handles the login/register menu.
+
+User - Base class with username, email, password, etc.
+
+Admin, Trainer, Member - Subclasses of User.
+
+UserDAO - Talks to the database for user info.
+
+UserService - Handles user logic like registering and logging in.
+
+Membership - Stores data about memberships.
+
+MembershipDAO / MembershipService - For buying/viewing memberships.
+
+WorkoutClass - Stores workout class details.
+
+WorkoutClassDAO / WorkoutClassService - For managing classes.
+
+DatabaseConnection - Connects the program to the database.
+
+To use the program you first need to unzip the project
+Then open your terminal
+Move to the project folder
+Build the program using this line "mvn clean package"
+Run the program using this line "java -cp target/gym-management-system-1.0-SNAPSHOT-jar-with-dependencies.jar com.gym.Main"
+
+Make sure your postgreSQL is running and ensure your info is correct in DatabaseConnection.java

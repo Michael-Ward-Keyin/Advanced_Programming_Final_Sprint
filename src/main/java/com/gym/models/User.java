@@ -1,12 +1,29 @@
-public class Admin extends User {
-    public Admin() {
-        this.role = "Admin";
+package com.gym.models;
+/**
+ * represents a system user
+ * Superclass for Admin, Trainer and Member
+ */
+public class User {
+    protected int id;
+    protected String username;
+    protected String password;
+    protected String email;
+    protected String phoneNumber;
+    protected String address;
+    protected String role;
+
+    public User() {}
+
+    public User(String username, String password, String email, String phoneNumber, String address, String role) {
+        this.username = username;
+        this.password = password;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+        this.address = address;
+        this.role = role;
     }
 
-    public Admin(String username, String password, String email, String phoneNumber, String address, String role){
-        super(username, password, email, phoneNumber, address, "Admin");
-    }
-
+    // Getters and Setters
     public int getId() {
         return id;
     }
